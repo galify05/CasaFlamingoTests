@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", "edge"));
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", "cent"));
 
     public WebDriver driver;
 

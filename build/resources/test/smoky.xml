@@ -3,8 +3,17 @@
 <suite name="Smoky" verbose="1">
     <test name="Smoky">
         <classes>
+
+
             <class name="com.casaFlamingo.tests.HomePageTest"/>
-            <class name="com.casaFlamingo.tests.LoginTests"/>
+
+            <class name="com.casaFlamingo.tests.LoginTests">
+            <methods>
+                <exclude name=".*Negative.*"></exclude>
+            </methods>
+            </class>
+
+
         </classes>
     </test>
 </suite>

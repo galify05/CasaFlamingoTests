@@ -23,19 +23,19 @@ test {
     useJUnitPlatform()
 }
 
-task all(type: Test) {
-    if (project.hasProperty('browser')) {
-        systemProperty 'browser', "${browser}"
-    }
-}
+//task all(type: Test) {
+//    if (project.hasProperty('browser')) {
+//        systemProperty 'browser', "${browser}"
+//    }
+//}
 
-task hpTest(type: Test) {
+task all(type: Test) {
     useTestNG() {
         def suite1 = project.hasProperty("suite1")
         def suite2 = project.hasProperty("suite2")
         def suite3 = project.hasProperty("suite3")
         if (suite1) {
-            suites 'src/test/resources/testng.xml'
+            suites 'src/test/resources/homeTest.xml'
         } else if (suite2) {
             suites 'src/test/resources/smoky.xml'
         } else if (suite3) {

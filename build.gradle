@@ -29,6 +29,7 @@ test {
 //    }
 //}
 
+//qa1
 task all(type: Test) {
     useTestNG() {
         def suite1 = project.hasProperty("suite1")
@@ -42,7 +43,7 @@ task all(type: Test) {
             suites ''
         }
     }
-    if (project.hasProperty('chrome')) {
-        systemProperty 'chrome', "${browser}"
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
     }
 }

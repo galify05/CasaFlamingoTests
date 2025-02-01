@@ -27,11 +27,11 @@ test {
 //    systemProperty 'chrome',"${browser}"
 //}
 //
-//task hpTest(type: Test){
-//    useTestNG() {
-//        suites 'src/test/resources/testng.xml'
-//    }
-//    if(project.hasProperty('chrome')){
-//        systemProperty 'chrome',"${browser}"
-//    }
-//}
+task hpTest(type: Test){
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+    if(project.hasProperty('chrome')){
+        systemProperty 'chrome',"${browser}"
+    }
+}

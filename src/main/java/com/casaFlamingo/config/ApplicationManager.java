@@ -37,7 +37,7 @@ public class ApplicationManager {
                 !browser.equals("cent")) {
             throw new IllegalArgumentException("Browser entered is not correct");
         }
-        driver.get("http://localhost:5173/#/");
+        driver.get("https://hostel-casa-flamingo-f95tn.ondigitalocean.app/#/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;

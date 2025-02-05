@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.casaFlamingo.tests.HomePageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-01T18:58:09" hostname="RTX2080" time="0.084">
+<testsuite name="com.casaFlamingo.tests.HomePageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-01T19:55:26" hostname="RTX2080" time="0.103">
   <properties/>
-  <testcase name="isHomePagePresent" classname="com.casaFlamingo.tests.HomePageTest" time="0.084"/>
+  <testcase name="isHomePagePresent" classname="com.casaFlamingo.tests.HomePageTest" time="0.103"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

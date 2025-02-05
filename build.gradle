@@ -40,7 +40,7 @@ task all(type: Test) {
         } else if (suite2) {
             suites 'src/test/resources/smoky.xml'
         } else if (suite3) {
-            suites ''
+            suites 'src/test/resources/negative.xml'
         }
     }
     if (project.hasProperty('browser')) {

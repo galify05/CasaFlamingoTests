@@ -20,7 +20,7 @@ public class HomePage extends BasePage {
         click(homeLinkPage);
     }
 
-    @FindBy(xpath = "//h1[.='Available Rooms']")
+    @FindBy(xpath = "//h2[.='Available Rooms']")
     WebElement homePageTitle;
     public HomePage isHomePagePresent(String h1Name) {
         Assert.assertTrue(homePageTitle.getText().contains(h1Name));

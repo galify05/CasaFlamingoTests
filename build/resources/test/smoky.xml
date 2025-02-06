@@ -4,15 +4,9 @@
     <test name="Smoky">
         <classes>
 
-
-            <class name="com.casaFlamingo.tests.HomePageTest"/>
-
-            <class name="com.casaFlamingo.tests.LoginTests">
-            <methods>
-                <exclude name=".*Negative.*"></exclude>
-            </methods>
-            </class>
-
+            <class name="com.casaFlamingo.tests.LoginPositiveTests"/>
+            <class name="com.casaFlamingo.tests.LogOutTests"/>
+            <class name="com.casaFlamingo.tests.RegistrationTests"/>
 
         </classes>
     </test>

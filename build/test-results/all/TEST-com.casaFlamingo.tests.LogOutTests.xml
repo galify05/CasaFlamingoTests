@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.casaFlamingo.tests.LogOutTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T19:37:24" hostname="RTX2080" time="0.254">
+  <properties/>
+  <testcase name="logOutTest" classname="com.casaFlamingo.tests.LogOutTests" time="0.254"/>
+  <system-out><![CDATA[20:37:22.067 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //button[@class="button1"]
+20:37:22.068 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:23.977 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //button[@class="button1"]
+20:37:23.977 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.050 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.cssSelector: [href='#/loginpage']
+20:37:24.050 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.065 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.cssSelector: [href='#/loginpage']
+20:37:24.065 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.167 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //button[.='Login']
+20:37:24.167 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.185 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //button[.='Login']
+20:37:24.185 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.264 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='userEmail']
+20:37:24.264 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.281 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='userEmail']
+20:37:24.281 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.350 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='userEmail']
+20:37:24.350 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.365 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='userEmail']
+20:37:24.366 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.413 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='userEmail']
+20:37:24.413 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.427 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='userEmail']
+20:37:24.428 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.535 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='password']
+20:37:24.536 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.552 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='password']
+20:37:24.553 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.612 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='password']
+20:37:24.612 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.625 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='password']
+20:37:24.626 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.665 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //input[@name='password']
+20:37:24.665 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.677 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //input[@name='password']
+20:37:24.677 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.734 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //button[.='Login' and @type='submit']
+20:37:24.735 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.753 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //button[.='Login' and @type='submit']
+20:37:24.753 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.833 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //button[contains(text(),'Log out')]
+20:37:24.834 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:24.987 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //button[contains(text(),'Log out')]
+20:37:24.987 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:25.050 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.cssSelector: [href='#/loginpage']
+20:37:25.051 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:25.063 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.cssSelector: [href='#/loginpage']
+20:37:25.063 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+20:37:25.087 [Test worker] INFO  com.casaFlamingo.tests.TestBase -- Test result: PASSEDlogOutTest
+20:37:25.087 [Test worker] INFO  com.casaFlamingo.tests.TestBase -- *******************************************************
+]]></system-out>
+  <system-err><![CDATA[февр. 06, 2025 8:37:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 118
+февр. 06, 2025 8:37:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 118.0.5993.159. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

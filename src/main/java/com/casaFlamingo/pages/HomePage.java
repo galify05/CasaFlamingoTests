@@ -38,8 +38,8 @@ public class HomePage extends BasePage {
     @FindBy(xpath= "//a[contains(text(),'My profile')]")
     WebElement myProfilePage;
     public MyProfilePage getMyProfilePage() {
-        pause(5000);
-        moveWithJS(0,200);
+        pause(500);
+        moveWithJS(0,400);
         click(myProfilePage);
         return new MyProfilePage(driver);
     }

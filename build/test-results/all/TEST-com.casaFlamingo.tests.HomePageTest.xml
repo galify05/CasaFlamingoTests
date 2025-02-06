@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.casaFlamingo.tests.HomePageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T20:28:51" hostname="RTX2080" time="0.104">
+  <properties/>
+  <testcase name="isHomePagePresent" classname="com.casaFlamingo.tests.HomePageTest" time="0.104"/>
+  <system-out><![CDATA[21:28:49.519 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //button[@class="button1"]
+21:28:49.521 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.445 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //button[@class="button1"]
+21:28:51.445 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.571 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.cssSelector: [href='#/']
+21:28:51.571 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.590 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.cssSelector: [href='#/']
+21:28:51.590 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.780 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator will find By.xpath: //h2[.='Available Rooms']
+21:28:51.781 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.818 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- The locator found By.xpath: //h2[.='Available Rooms']
+21:28:51.818 [Test worker] INFO  com.casaFlamingo.utils.MyListener -- ------------------------------------------------------------
+21:28:51.854 [Test worker] INFO  com.casaFlamingo.tests.TestBase -- Test result: PASSEDisHomePagePresent
+21:28:51.854 [Test worker] INFO  com.casaFlamingo.tests.TestBase -- *******************************************************
+]]></system-out>
+  <system-err><![CDATA[февр. 06, 2025 9:28:43 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: The chromedriver version (132.0.6834.159) detected in PATH at E:\Java\Tools\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.53); currently, chromedriver 133.0.6943.53 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
+февр. 06, 2025 9:28:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 133, returning the closest version; found: 132; Please update to a Selenium version that supports CDP version 133
+]]></system-err>
+</testsuite>

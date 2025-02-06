@@ -21,7 +21,7 @@ public class TestBase {
         driver = app.startTest();
     }
 
-    @AfterMethod(enabled = false)
+    @AfterMethod(enabled = true)
     public void tearDown(ITestResult result) {
         if (result.isSuccess()) {
             logger.info("Test result: PASSED" + result.getMethod().getMethodName());

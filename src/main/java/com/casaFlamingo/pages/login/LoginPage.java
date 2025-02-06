@@ -31,13 +31,14 @@ public class LoginPage extends BasePage {
         click(submitLoginButton);
     }
 
-    @FindBy(css = ".error")
+    @FindBy(css = "._error_o39hb_35")
     WebElement error;
 
     public LoginPage verifyLoginNegativeTest() {
         Assert.assertTrue(error.getText().contains("User not authenticated"));
         return this;
     }
+
 
     public LoginPage verifyLoginWithoutEmail() {
         Assert.assertTrue(error.getText().contains("Username is required!"));

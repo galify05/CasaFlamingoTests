@@ -3,10 +3,7 @@ package com.casaFlamingo.pages;
 import com.casaFlamingo.pages.login.LoginPage;
 import com.casaFlamingo.pages.login.MyProfilePage;
 import com.casaFlamingo.pages.login.WelcomeToCasaFlamingoPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -55,10 +52,16 @@ WebElement management;
     return this;}
 
 
-    @FindBy(xpath = "//nav//button[contains(text(),'Log Out')]")
+    @FindBy(xpath = "//button[contains(text(),'Log out')]")
     WebElement logOut;
-    public void isLogOutPresent() {
-        pause(200);
-    Assert.assertTrue(logOut.isDisplayed());
+
+
+    public HomePage clickOnLogOut() {
+        click(logOut);
+    return this;
     }
-}
+
+    public HomePage verifyStatus() {
+        Assert.assertTrue(isElementDisplayed(loginLinkPage));
+        return this;
+}}

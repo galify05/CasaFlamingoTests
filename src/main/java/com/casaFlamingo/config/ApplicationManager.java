@@ -1,10 +1,13 @@
 package com.casaFlamingo.config;
 
+import com.casaFlamingo.utils.MyListener;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
 import java.time.Duration;
 
@@ -12,6 +15,7 @@ public class ApplicationManager {
 
     String browser;
     public WebDriver driver;
+Dimension mySize = new Dimension(1800,1000);
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -37,8 +41,10 @@ public class ApplicationManager {
                 !browser.equals("cent")) {
             throw new IllegalArgumentException("Browser entered is not correct");
         }
+        driver = new EventFiringDecorator(new MyListener()).decorate(driver);
+
         driver.get("https://hostel-casa-flamingo-f95tn.ondigitalocean.app/#/");
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(mySize);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }

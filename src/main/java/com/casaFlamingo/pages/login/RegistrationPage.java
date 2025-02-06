@@ -4,6 +4,7 @@ import com.casaFlamingo.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class RegistrationPage extends BasePage {
 
@@ -35,4 +36,31 @@ WebElement registrationSubmitButton;
     public void clickOnSubmitRegistrationButton() {
         click(registrationSubmitButton);
     }
+
+    @FindBy(css = "._error_1i360_33")
+    WebElement error;
+    public RegistrationPage verifyError() {
+        Assert.assertTrue(error.getText().contains("already exist"));
+    return this;
+    }
+
+    public RegistrationPage verifyEmailError() {
+        Assert.assertTrue(error.getText().contains("Email is required!"));
+        return this;
+    }
+
+    public RegistrationPage verifyPasswordError() {
+        Assert.assertTrue(error.getText().contains("Password is required!"));
+        return this;
+    }
+    public RegistrationPage verifyShortPasswordError() {
+        Assert.assertTrue(error.getText().contains("more than 8 characters!"));
+        return this;
+    }
+
+    public RegistrationPage verifyNameError() {
+        Assert.assertTrue(error.getText().contains("Name is required!"));
+        return this;
+    }
+
 }

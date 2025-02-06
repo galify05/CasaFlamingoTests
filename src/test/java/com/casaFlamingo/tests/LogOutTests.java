@@ -12,8 +12,6 @@ public class LogOutTests extends TestBase {
     @BeforeMethod
     public void precondition() {
         new BasePage(driver).acceptCookie();
-
-        if (logOutTest()){}
         new HomePage(driver).getWelcomeToCasaFlamingoPage();
         new WelcomeToCasaFlamingoPage(driver).getLoginPage();
         new LoginPage(driver).enterUserData("sssss@biba.ua", "Cobra123!").clickOnSubmitLoginButton();
@@ -21,6 +19,8 @@ public class LogOutTests extends TestBase {
 
     @Test
     public void logOutTest() {
-        new HomePage(driver).isLogOutPresent();
+        new HomePage(driver).clickOnLogOut().verifyStatus();
+
+
     }
 }

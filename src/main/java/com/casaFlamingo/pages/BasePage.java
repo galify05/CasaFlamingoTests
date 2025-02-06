@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.NoSuchElementException;
+
 public class BasePage {
 
     public WebDriver driver;
@@ -16,6 +18,9 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         js = (JavascriptExecutor) driver;
+    }
+
+    public BasePage(String firstName, String lastName, String phone, String email, String password) {
     }
 
     public void click(WebElement element) {
@@ -56,6 +61,16 @@ public class BasePage {
     public HomePage rejecrtCookie() {
         click(rejectCookieButton);
         return new HomePage(driver);
+    }
+
+    public boolean isElementDisplayed(WebElement element) {
+        try {
+            element.isDisplayed();
+            return true;
+        } catch (NoSuchElementException ex) {
+            ex.getMessage();
+            return false;
+        }
     }
 
 

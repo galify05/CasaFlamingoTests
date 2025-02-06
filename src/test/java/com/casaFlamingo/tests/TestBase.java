@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", "cent"));
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", "chrome"));
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
     public WebDriver driver;

@@ -7,7 +7,6 @@
             <class name="com.casaFlamingo.tests.LoginNegativeTest"/>
             <class name="com.casaFlamingo.tests.RegistrationNegativeTests"/>
 
-
         </classes>
     </test>
 </suite>

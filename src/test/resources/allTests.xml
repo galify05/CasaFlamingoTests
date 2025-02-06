@@ -1,0 +1,14 @@
+<suite name="Quick1" verbose="1">
+    <test name="isHomePagePresent">
+        <classes>
+
+            <class name="com.casaFlamingo.tests.HomePageTest"/>
+            <class name="com.casaFlamingo.tests.LoginPositiveTests"/>
+            <class name="com.casaFlamingo.tests.LogOutTests"/>
+            <class name="com.casaFlamingo.tests.RegistrationTests"/>
+            <class name="com.casaFlamingo.tests.LoginNegativeTest"/>
+            <class name="com.casaFlamingo.tests.RegistrationNegativeTests"/>
+
+        </classes>
+    </test>
+</suite>

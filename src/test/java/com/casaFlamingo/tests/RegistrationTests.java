@@ -1,6 +1,8 @@
 package com.casaFlamingo.tests;
 
 import com.casaFlamingo.pages.HomePage;
+import com.casaFlamingo.pages.login.MyProfilePage;
+import com.casaFlamingo.pages.login.RegistrationPage;
 import com.casaFlamingo.pages.login.WelcomeToCasaFlamingoPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,5 +16,22 @@ public class RegistrationTests extends TestBase{
         new HomePage(driver).getWelcomeToCasaFlamingoPage();
         new WelcomeToCasaFlamingoPage(driver).getRegisterPage();
     }
+
+    @Test
+    public void RegistrationPositiveTest() {
+        new RegistrationPage(driver).enterUserData("Bibok","Pupok","+1234567899","bibokpup@cmd.run","Cobra123!").clickOnSubmitRegistrationButton();
+       new MyProfilePage(driver).getMyEmail("bibokpup@cmd.run");
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }

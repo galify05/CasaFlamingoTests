@@ -1,6 +1,7 @@
 package com.casaFlamingo.pages.login;
 
 import com.casaFlamingo.pages.BasePage;
+import com.casaFlamingo.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,11 +13,11 @@ public class MyProfilePage extends BasePage {
     }
 
 
-    @FindBy(xpath = "//p[.='Test']")
-    WebElement userNameField;
-    public MyProfilePage verifyLoginTest(String userName) {
-        pause(5000);
-        Assert.assertTrue(userNameField.getText().contains(userName));
-    return this;
+    @FindBy(xpath = "//body//div//main//main//div//p[1]")
+    WebElement emailField;
+
+    public MyProfilePage getMyEmail(String email){
+        Assert.assertTrue(emailField.getText().contains(email));
+        return this;
     }
 }

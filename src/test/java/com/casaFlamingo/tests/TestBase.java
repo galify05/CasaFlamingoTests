@@ -21,10 +21,4 @@ public class TestBase {
     public void tearDown() {
         app.stopTest();
     }
-//    @AfterMethod()
-//    public void tearClose(){
-//        app.closeTest();
-//    }
-
-
 }

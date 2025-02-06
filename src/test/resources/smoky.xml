@@ -7,7 +7,7 @@
 
             <class name="com.casaFlamingo.tests.HomePageTest"/>
 
-            <class name="com.casaFlamingo.tests.LoginTests">
+            <class name="com.casaFlamingo.tests.LoginPositiveTests">
             <methods>
                 <exclude name=".*Negative.*"></exclude>
             </methods>

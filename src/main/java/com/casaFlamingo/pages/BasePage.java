@@ -1,5 +1,7 @@
 package com.casaFlamingo.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,10 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 public class BasePage {
 
     public WebDriver driver;
+    public static JavascriptExecutor js;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
+        js = (JavascriptExecutor) driver;
     }
 
     public void click(WebElement element) {
@@ -33,6 +37,9 @@ public class BasePage {
             throw new RuntimeException(e);
         }
     }
+    public void moveWithJS(int x, int y) {
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
+    }
 
 
 
@@ -50,4 +57,7 @@ public class BasePage {
         click(rejectCookieButton);
         return new HomePage(driver);
     }
+
+
+
 }

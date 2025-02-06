@@ -4,13 +4,13 @@
     <test name="Negative">
         <classes>
 
-            <class name="com.casaFlamingo.tests.LoginTests">
+            <class name="com.casaFlamingo.tests.LoginPositiveTests">
                 <methods>
                     <include name=".*Negative.*"></include>
                 </methods>
             </class>
 
-            <class name="com.casaFlamingo.tests.LoginTests">
+            <class name="com.casaFlamingo.tests.LoginPositiveTests">
                 <methods>
                     <include name=".*Negative.*"></include>
                 </methods>

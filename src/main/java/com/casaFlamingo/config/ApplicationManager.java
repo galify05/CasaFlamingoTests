@@ -17,6 +17,16 @@ public class ApplicationManager {
     public WebDriver driver;
 Dimension mySize = new Dimension(1800,1000);
 
+
+    public static int i = (int) ((System.currentTimeMillis() / 1000 % 3600));
+    public String email = "bibok" + i + "@mail.ua";
+    public String emailReg = "sssss@biba.ua";
+    public  String phone = "1234567899";
+    public String password = "Cobra123!";
+    public String firstName = "Bibok";
+    public String lastName = "Pupok";
+
+
     public ApplicationManager(String browser) {
         this.browser = browser;
     }

@@ -9,9 +9,6 @@ import org.testng.annotations.Test;
 
 public class RegistrationNegativeTests extends TestBase {
 
-    static int i = (int)((System.currentTimeMillis()/1000%3600));
-    String email = "bibok"+i+"@mail.ua";
-
     @BeforeMethod
     public void precondition() {
         new BasePage(driver).acceptCookie();
@@ -21,70 +18,68 @@ public class RegistrationNegativeTests extends TestBase {
 
     @Test
     public void RegistrationAlreadyExistingEmailTest() {
-        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567899", "sssss@biba.ua", "Cobra123!").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyError();
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, "sssss@biba.ua", app.password).clickOnSubmitRegistrationButton()
+        .verifyError();
     }
 
     @Test
     public void RegistrationEmptyEmailTest() {
-        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567899", "", "Cobra123!").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyEmailError();
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, "", app.password).clickOnSubmitRegistrationButton()
+        .verifyEmailError();
     }
 
-//    @Test
-//    public void RegistrationInvalidEmailFormatTest() {
-//        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567899", "bibokpup@dotrun", "Cobra123!").clickOnSubmitRegistrationButton();
-//        new RegistrationPage(driver).verifyEmailError();
-//    }
-/// Bug
+    @Test
+    public void RegistrationInvalidEmailFormatTest() {
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, "bibokpup@dotrun", app.password).clickOnSubmitRegistrationButton()
+        .verifyEmailError();
+    } /// BUG /////////////
 
     @Test
     public void RegistrationEmptyPasswordTest() {
-        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567899", email, "").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyPasswordError();
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, app.email, "").clickOnSubmitRegistrationButton()
+                .verifyPasswordError();
     }
 
     @Test
     public void RegistrationShortPasswordTest() {
-        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567899", email, "Co1!").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyShortPasswordError();
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, app.email, "Co1!").clickOnSubmitRegistrationButton()
+        .verifyShortPasswordError();
     }
 
     @Test
     public void RegistrationWithoutFirstNameTest() {
-        new RegistrationPage(driver).enterUserData("", "Pupok", "+1234567899", email, "Cobra123!").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyNameError();
+        new RegistrationPage(driver).enterUserData("", app.lastName, app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
+        .verifyNameError();
     }
-//    @Test
-//    public void RegistrationLongNameTest() {
-//        new RegistrationPage(driver).enterUserData("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "+1234567899", "bibokpu2p@cmd.run", "Cobra123!").clickOnSubmitRegistrationButton();
-//        new RegistrationPage(driver).verifyNameError();
-//    }
-/// bug
+    @Test
+    public void RegistrationLongNameTest() {
+        new RegistrationPage(driver).enterUserData("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
+        .verifyNameError();
+    }
+/// 111111111111111111
 
     @Test
     public void RegistrationWithoutLastNameTest() {
-        new RegistrationPage(driver).enterUserData("Bibok", "", "+1234567899", email, "Cobra123!").clickOnSubmitRegistrationButton();
-        new RegistrationPage(driver).verifyNameError();
+        new RegistrationPage(driver).enterUserData(app.firstName, "", app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
+        .verifyNameError();
     }
 
-//    @Test
-//    public void RegistrationWithSpecNameTest() {
-//        new RegistrationPage(driver).enterUserData("!!!!!!!", "!!!!!!!", "+1234567899", "bibokpup@cmd.run", "Cobra123!").clickOnSubmitRegistrationButton();
-//     //   new RegistrationPage(driver).verifyNameError();
-//    }
-////bug
+    @Test
+    public void RegistrationWithSpecNameTest() {
+        new RegistrationPage(driver).enterUserData("!!!!!!!", "!!!!!!!", app.phone, "bibokpup@cmd.run", app.password).clickOnSubmitRegistrationButton()
+        .verifyNameErrorSpec();
+    }
 
-//        @Test
-//    public void RegistrationWithInvalidPhoneTest() {
-//        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "+1234567", "bibokpup@cmd.run", "Cobra123!").clickOnSubmitRegistrationButton();
-//        new RegistrationPage(driver).verifyShortPasswordError();
-//    }
-    /// bug
-//    @Test
-//    public void RegistrationWithInvalidPhoneTest() {
-//        new RegistrationPage(driver).enterUserData("Bibok", "Pupok", "AaBbCcDd", "bibokpup@cmd.run", "Cobra123!").clickOnSubmitRegistrationButton();
-//        new RegistrationPage(driver).verifyError();
-//    }
-////bug
+
+        @Test
+    public void RegistrationWithInvalidPhoneTest1() {
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, "+1234567", "bibokpup@cmd.run", app.password).clickOnSubmitRegistrationButton()
+        .verifyNumber();
+    }
+
+    @Test
+    public void RegistrationWithInvalidPhoneTest() {
+        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, "AaBbCcDd", "bibokpup@cmd.run", app.password).clickOnSubmitRegistrationButton()
+        .verifyNumber();
+    }
 }

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver) {
@@ -28,12 +30,14 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//button[.='Login' and @type='submit']")
     WebElement submitLoginButton;
 
-    public void clickOnSubmitLoginButton() {
+    public LoginPage clickOnSubmitLoginButton() {
         click(submitLoginButton);
+        return this;
     }
 
-    @FindBy(css = "._error_o39hb_35")
+    @FindBy(css = "._error_1ut8p_35")
     WebElement error;
+
 
     public LoginPage verifyLoginNegativeTest() {
         Assert.assertTrue(error.getText().contains("User not authenticated"));
@@ -45,10 +49,10 @@ public class LoginPage extends BasePage {
         Assert.assertTrue(error.getText().contains("Username is required!"));
         return this;
     }
-    @FindBy(xpath = "//span[.='Password is required!']")
-    WebElement spanError;
+
+
     public LoginPage verifyLoginWithoutPasswordTest() {
-        Assert.assertTrue(spanError.getText().contains("Password is required!"));
+        Assert.assertTrue(error.getText().contains("Password is required!"));
         return this;
     }
 }

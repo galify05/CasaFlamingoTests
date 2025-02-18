@@ -33,11 +33,12 @@ type(passwordField, password);
     }
 @FindBy(xpath = "//button[.='Register']")
 WebElement registrationSubmitButton;
-    public void clickOnSubmitRegistrationButton() {
+    public RegistrationPage clickOnSubmitRegistrationButton() {
         click(registrationSubmitButton);
+        return this;
     }
 
-    @FindBy(css = "._error_1i360_33")
+    @FindBy(css = "._error_f17fy_50")
     WebElement error;
     public RegistrationPage verifyError() {
         Assert.assertTrue(error.getText().contains("already exist"));
@@ -63,4 +64,20 @@ WebElement registrationSubmitButton;
         return this;
     }
 
+    public RegistrationPage verifyNumber() {
+        Assert.assertTrue(error.getText().contains("Only numbers are allowed!"));
+        return this;
+    }
+
+    public RegistrationPage verifyNameErrorSpec() {
+        Assert.assertTrue(error.getText().contains("Only letters are allowed!"));
+        return this;
+    }
+
+    @FindBy(css = "._link_f17fy_14")
+    WebElement successfullReg;
+    public RegistrationPage verifyRegister() {
+        Assert.assertTrue(successfullReg.getText().contains("Press here to go to login page"));
+        return this;
+    }
 }

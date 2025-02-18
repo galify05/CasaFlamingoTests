@@ -3,11 +3,8 @@ package com.casaFlamingo.tests;
 import com.casaFlamingo.pages.BasePage;
 import com.casaFlamingo.pages.HomePage;
 import com.casaFlamingo.pages.login.LoginPage;
-
 import com.casaFlamingo.pages.login.WelcomeToCasaFlamingoPage;
-;
 import org.testng.annotations.BeforeMethod;
-
 import org.testng.annotations.Test;
 
 public class LoginPositiveTests extends TestBase {
@@ -19,10 +16,10 @@ public class LoginPositiveTests extends TestBase {
         new WelcomeToCasaFlamingoPage(driver).getLoginPage();
     }
 
-    @Test()
+    @Test
     public void loginAsUserPositiveTest() {
-        new LoginPage(driver).enterUserData("sssss@biba.ua", "Cobra123!").clickOnSubmitLoginButton();
-        new HomePage(driver).getMyProfilePage().getMyEmail("sssss@biba.ua");
+        new LoginPage(driver).enterUserData(app.emailReg, app.password).clickOnSubmitLoginButton();
+        new HomePage(driver).getMyProfilePage().getMyEmail(app.emailReg);
     }
 
     @Test

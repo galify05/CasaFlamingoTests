@@ -2,7 +2,6 @@ package com.casaFlamingo.tests;
 
 import com.casaFlamingo.config.ApplicationManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.Browser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
@@ -21,7 +20,7 @@ public class TestBase {
         driver = app.startTest();
     }
 
-    @AfterMethod(enabled = true)
+    @AfterMethod(enabled = false)
     public void tearDown(ITestResult result) {
         if (result.isSuccess()) {
             logger.info("Test result: PASSED" + result.getMethod().getMethodName());

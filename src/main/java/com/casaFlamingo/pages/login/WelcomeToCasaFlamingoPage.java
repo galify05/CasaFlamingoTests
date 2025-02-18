@@ -13,8 +13,9 @@ public class WelcomeToCasaFlamingoPage extends BasePage {
 
     @FindBy(xpath = "//button[.='Login']")
     WebElement loginButton;
-    public void getLoginPage() {
+    public LoginPage getLoginPage() {
         click(loginButton);
+        return new LoginPage(driver);
     }
 
 

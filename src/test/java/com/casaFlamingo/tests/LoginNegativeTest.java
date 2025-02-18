@@ -7,7 +7,7 @@ import com.casaFlamingo.pages.login.WelcomeToCasaFlamingoPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginNegativeTest extends TestBase{
+public class LoginNegativeTest extends TestBase {
 
     @BeforeMethod
     public void precondition() {
@@ -18,26 +18,29 @@ public class LoginNegativeTest extends TestBase{
 
     @Test
     public void loginWithInvalidEmail() {
-        new LoginPage(driver).enterUserData("sssss1@biba.ua", "Cobra123!").clickOnSubmitLoginButton();
-        new LoginPage(driver).verifyLoginNegativeTest();
+        new LoginPage(driver)
+                .enterUserData("sssss1@biba.ua", "Cobra123!")
+                .clickOnSubmitLoginButton()
+                .verifyLoginNegativeTest();
     }
 
 
     @Test
     public void loginWithOutEmail() {
-        new LoginPage(driver).enterUserData("", "Cobra123!").clickOnSubmitLoginButton();
-        new LoginPage(driver).verifyLoginWithoutEmail();
+        new LoginPage(driver).enterUserData("", "Cobra123!")
+                .clickOnSubmitLoginButton()
+        .verifyLoginWithoutEmail();
     }
 
     @Test
     public void loginWithoutPassword() {
-        new LoginPage(driver).enterUserData("sssss1@biba.ua", "").clickOnSubmitLoginButton();
-        new LoginPage(driver).verifyLoginWithoutPasswordTest();
+        new LoginPage(driver).enterUserData("sssss1@biba.ua", "").clickOnSubmitLoginButton()
+       .verifyLoginWithoutPasswordTest();
     }
 
     @Test
     public void loginWithInvalidPassword() {
-        new LoginPage(driver).enterUserData("sssss1@biba.ua", "Cobra123!!").clickOnSubmitLoginButton();
-        new LoginPage(driver).verifyLoginNegativeTest();
+        new LoginPage(driver).enterUserData("sssss1@biba.ua", "Cobra123!!").clickOnSubmitLoginButton()
+        .verifyLoginNegativeTest();
     }
 }

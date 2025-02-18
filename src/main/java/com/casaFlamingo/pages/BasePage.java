@@ -1,12 +1,13 @@
 package com.casaFlamingo.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class BasePage {
@@ -25,6 +26,10 @@ public class BasePage {
 
     public void click(WebElement element) {
         element.click();
+    }
+    public void clickWithJS(WebElement element, int x, int y) {
+        moveWithJS(x, y);
+        click(element);
     }
 
     public void type(WebElement element, String text) {
@@ -45,12 +50,16 @@ public class BasePage {
     public void moveWithJS(int x, int y) {
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
+    public void typeWithJS(WebElement element, String text, int x, int y) {
+        moveWithJS(x, y);
+        type(element, text);
+    }
 
+    public void hideElement() {
+        js.executeScript("document.querySelector('footer').style.display='none';");
+    }
 
-
-
-    //    @FindBy(xpath = "//button[.='Accept']")
-    @FindBy(xpath = "//button[@class=\"button1\"]")
+    @FindBy(xpath = "//button[@class='button1']")
     WebElement acceptCookieButton;
     public void acceptCookie() {
         click(acceptCookieButton);
@@ -71,6 +80,37 @@ public class BasePage {
             ex.getMessage();
             return false;
         }
+    }
+
+
+
+    protected void verifyLinks(String url) {
+        try {
+            URL linkUrl = new URL(url);
+
+            HttpURLConnection connection = (HttpURLConnection) linkUrl.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            if (connection.getResponseCode() >= 400) {
+                System.out.println(url + " - " + connection.getResponseMessage() + "is a broken link");
+            } else {
+                System.out.println(url + " - " + connection.getResponseMessage());
+            }
+        } catch (Exception e) {
+            System.out.println(url + " - " + e.getMessage() + "Error occured");
+        }
+    }
+
+
+    public void clickWithRectangle(WebElement element, int x, int y) {
+        Rectangle rectangle = element.getRect();
+
+        int offsetX = rectangle.getWidth() / x;
+        int offsetY = rectangle.getHeight() / y;
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.moveByOffset(-offsetX, -offsetY).click().perform();
     }
 
 

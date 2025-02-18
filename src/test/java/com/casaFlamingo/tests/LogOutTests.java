@@ -14,13 +14,11 @@ public class LogOutTests extends TestBase {
         new BasePage(driver).acceptCookie();
         new HomePage(driver).getWelcomeToCasaFlamingoPage();
         new WelcomeToCasaFlamingoPage(driver).getLoginPage();
-        new LoginPage(driver).enterUserData("sssss@biba.ua", "Cobra123!").clickOnSubmitLoginButton();
+        new LoginPage(driver).enterUserData("sssss@biba.ua", app.password).clickOnSubmitLoginButton();
     }
 
     @Test
     public void logOutTest() {
         new HomePage(driver).clickOnLogOut().verifyStatus();
-
-
     }
 }

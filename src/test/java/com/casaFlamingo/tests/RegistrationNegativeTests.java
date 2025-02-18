@@ -32,7 +32,8 @@ public class RegistrationNegativeTests extends TestBase {
 //    public void RegistrationInvalidEmailFormatTest() {
 //        new RegistrationPage(driver).enterUserData(app.firstName, app.lastName, app.phone, "bibokpup@dotrun", app.password).clickOnSubmitRegistrationButton()
 //        .verifyEmailError();
-    } /// BUG /////////////
+//    }
+// / BUG /////////////
 
     @Test
     public void RegistrationEmptyPasswordTest() {

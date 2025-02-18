@@ -8,6 +8,8 @@
             <class name="com.casaFlamingo.tests.RegistrationTests"/>
             <class name="com.casaFlamingo.tests.LoginNegativeTest"/>
             <class name="com.casaFlamingo.tests.RegistrationNegativeTests"/>
+            <class name="com.casaFlamingo.tests.ChekImagesTest"/>
+            <class name="com.casaFlamingo.tests.BookingTests"/>
 
         </classes>
     </test>

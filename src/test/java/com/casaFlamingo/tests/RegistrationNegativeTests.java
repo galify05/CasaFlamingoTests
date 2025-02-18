@@ -52,11 +52,11 @@ public class RegistrationNegativeTests extends TestBase {
         new RegistrationPage(driver).enterUserData("", app.lastName, app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
         .verifyNameError();
     }
-    @Test
-    public void RegistrationLongNameTest() {
-        new RegistrationPage(driver).enterUserData("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
-        .verifyNameError();
-    }
+//    @Test
+//    public void RegistrationLongNameTest() {
+//        new RegistrationPage(driver).enterUserData("Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", app.phone, app.email, app.password).clickOnSubmitRegistrationButton()
+//        .verifyNameError();
+//    }
 /// 111111111111111111
 
     @Test

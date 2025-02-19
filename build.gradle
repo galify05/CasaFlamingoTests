@@ -34,6 +34,8 @@ task all(type: Test) {
         def suite2 = project.hasProperty("suite2")
         def suite3 = project.hasProperty("suite3")
         def suite4 = project.hasProperty("suite4")
+        def suite5 = project.hasProperty("suite5")
+        def suite6 = project.hasProperty("suite6")
         if (suite1) {
             suites 'src/test/resources/homeTest.xml'
         } else if (suite2) {
@@ -42,6 +44,10 @@ task all(type: Test) {
             suites 'src/test/resources/negative.xml'
         } else if (suite4) {
             suites 'src/test/resources/allTests.xml'
+        }else if (suite5) {
+            suites 'src/test/resources/imgTest.xml'
+        } else if (suite6) {
+            suites 'src/test/resources/Booking.xml'
         }
     }
 

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="booking" verbose="1">
+    <test name="booking">
+        <classes>
+
+            <class name="com.casaFlamingo.tests.BookingTests"/>
+
+        </classes>
+    </test>
+</suite>

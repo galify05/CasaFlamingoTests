@@ -62,7 +62,7 @@ public class BookingPage extends BasePage {
                     pause(500);
 
                     WebElement bookButton = container.findElement(By.cssSelector("button._btn_1muke_42"));
-                    clickWithJS(bookButton, 0, 500);
+                    clickWithJS(bookButton, 0, 100);
 
                     return this;
                 }

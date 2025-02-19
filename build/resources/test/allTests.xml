@@ -1,5 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
 <suite name="allTests" verbose="1">
-    <test name="isHomePagePresent">
+    <test name="allTests">
         <classes>
 
             <class name="com.casaFlamingo.tests.HomePageTest"/>
@@ -8,6 +10,8 @@
             <class name="com.casaFlamingo.tests.RegistrationTests"/>
             <class name="com.casaFlamingo.tests.LoginNegativeTest"/>
             <class name="com.casaFlamingo.tests.RegistrationNegativeTests"/>
+            <class name="com.casaFlamingo.tests.ChekImagesTest"/>
+            <class name="com.casaFlamingo.tests.BookingTests"/>
 
         </classes>
     </test>
